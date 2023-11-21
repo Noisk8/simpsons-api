@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/estilo.css" />
-    <title>API R&M</title>
-  </head>
-  <body>
-    <h1>Personajes</h1>
-    <img src="https://w7.pngwing.com/pngs/136/205/png-transparent-the-simpsons-ride-homer-simpson-bart-simpson-universal-studios-hollywood-the-simpsons-tapped-out-bart-simpson-television-springfield-cartoon.png"  />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/estilo.css" />
+  <title>API R&M</title>
+</head>
+<body>
 
-    <main></main>
+  <img class="imagen-responsive" src="https://www.mundodeportivo.com/alfabeta/hero/2018/10/167687.alfabetajuega-problemas-tecnicos.jpg" />
 
-    <script src="/js/script.js"></script>
-  </body>
+  <div class="search-container">
+    <label for="searchInput">Buscar personaje:</label>
+    <input type="text" id="searchInput">
+    <button onclick="buscarPersonaje()">Buscar</button>
+  </div>
+
+    <div id="resultado"></div>
+
+  <main>
+
+  </main>
+
+  <script>
+    function buscarPersonaje() {
+      // Obtener el valor del input de búsqueda
+      const query = document.getElementById('searchInput').value;
+
+      // Hacer la solicitud a la API
+      fetch(`https://apisimpsons.fly.dev/api/personajes/find/${query}`)
+        .then(response => response.json())
+        .then(data => mostrarResultado(data))
+        .catch(error => console.error('Error al realizar la solicitud:', error));
+    }
+
+    function mostrarResultado(data) {
+      // Limpiar el contenido anterior
+      document.getElementById('resultado').innerHTML = '';
+
+      // Verificar si hay resultados
+      if (data.length === 0) {
+        document.getElementById('resultado').innerHTML = 'No se encontraron resultados.';
+        return;
+      }
+
+      // Mostrar los resultados
+      const resultadoDiv = document.getElementById('resultado');
+      data.forEach(personaje => {
+        const personajeDiv = document.createElement('div');
+        personajeDiv.textContent = `${personaje.nombre} - ${personaje.descripcion}`;
+        resultadoDiv.appendChild(personajeDiv);
+      });
+    }
+  </script>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/busqueda.js"></script>
+</body>
 </html>
