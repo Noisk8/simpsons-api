@@ -1,65 +1,74 @@
+/* Estilos para el cuerpo del documento */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #333;
-    margin: 0;
+    font-family: 'Arial', sans-serif; /* Define la fuente del texto */
+    background-color: #333; /* Define el color de fondo */
+    margin: 0; /* Elimina los márgenes por defecto */
 }
 
+/* Estilos para el encabezado del documento */
 header {
-    position: relative;
-    text-align: center;
-    max-height: 500px; 
-    color: #fff;
+    position: relative; /* Posiciona el encabezado de manera relativa al cuerpo del documento */
+    text-align: center; /* Centra el texto dentro del encabezado */
+    max-height: 500px; /* Define la altura máxima del encabezado */
+    color: #fff; /* Define el color del texto dentro del encabezado */
 }
 
+/* Estilos para la imagen dentro del encabezado */
 header img {
     max-width: 100%; /* Hace que la imagen sea responsive */
     max-height: 150px; /* Ajusta la altura según tus preferencias */
     object-fit: cover; /* La imagen se ajusta para cubrir el área especificada sin deformarse */
 }
 
+/* Estilos para el título principal (h1) */
 h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute; /* Posiciona el título de manera absoluta dentro del encabezado */
+    top: 50%; /* Centra el título verticalmente */
+    left: 50%; /* Centra el título horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición del título para que esté perfectamente centrado */
+    font-size: 2em; /* Define el tamaño de la fuente del título */
+    color: #fff; /* Define el color del título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade una sombra al texto del título */
 }
 
+/* Estilos para la barra de navegación */
 nav {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    position: absolute; /* Posiciona la barra de navegación de manera absoluta dentro del encabezado */
+    top: 20px; /* Define la distancia desde la parte superior del encabezado */
+    left: 20px; /* Define la distancia desde la parte izquierda del encabezado */
 }
 
+/* Estilos para el contenido principal */
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    margin-top: 180px;
+    display: flex; /* Define el contenido principal como un contenedor flexible */
+    flex-wrap: wrap; /* Permite que los elementos dentro del contenedor se ajusten automáticamente */
+    justify-content: space-around; /* Distribuye los elementos dentro del contenedor de manera uniforme */
+    padding: 20px; /* Añade un relleno alrededor del contenido principal */
+    margin-top: 180px; /* Añade un margen en la parte superior del contenido principal */
 }
 
+/* Estilos para el contenedor de búsqueda */
 .search-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px; 
-    margin-top: 40px;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px 0 rgba(255, 0, 255, 0.2), 0 6px 20px 0 rgba(255, 0, 255, 0.19);/* Espaciado inferior para separar del resultado */
-    border-radius: 5px;
+    display: flex; /* Define el contenedor de búsqueda como un contenedor flexible */
+    gap: 10px; /* Define la distancia entre los elementos dentro del contenedor de búsqueda */
+    margin-bottom: 20px; /* Añade un margen en la parte inferior del contenedor de búsqueda */
+    margin-top: 40px; /* Añade un margen en la parte superior del contenedor de búsqueda */
+    align-items: center; /* Centra los elementos dentro del contenedor de búsqueda verticalmente */
+    justify-content: center; /* Centra los elementos dentro del contenedor de búsqueda horizontalmente */
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 255, 0.2), 0 6px 20px 0 rgba(255, 0, 255, 0.19);/* Añade una sombra al contenedor de búsqueda */
+    border-radius: 5px; /* Redondea las esquinas del contenedor de búsqueda */
 }
   
 
+/* Estilos para los artículos */
 article {
-    box-shadow: 0 4px 8px 0 rgba(255, 0, 255, 0.2), 0 6px 20px 0 rgba(255, 0, 255, 0.19);
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 255, 0.2), 0 6px 20px 0 rgba(255, 0, 255, 0.19); /* Añade una sombra a los artículos */
+    border-radius: 5px; /* Redondea las esquinas de los artículos */
+    padding: 20px; /* Añade un relleno alrededor de los artículos */
+    margin: 10px; /* Añade un margen alrededor de los artículos */
 }
+/* Estilos para las imágenes responsivas */
 .imagen-responsive {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Define el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Ajusta la altura de la imagen de manera automática para mantener las proporciones */
   }
