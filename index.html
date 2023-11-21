@@ -11,8 +11,8 @@
   <img class="imagen-responsive" src="https://www.mundodeportivo.com/alfabeta/hero/2018/10/167687.alfabetajuega-problemas-tecnicos.jpg" />
 
   <div class="search-container">
-    <label for="searchInput">Buscar personaje:</label>
-    <input type="text" id="searchInput">
+   
+    <input type="text" id="searchInput" placeholder="Buscar personaje">
     <button onclick="buscarPersonaje()">Buscar</button>
   </div>
 
@@ -22,37 +22,7 @@
 
   </main>
 
-  <script>
-    function buscarPersonaje() {
-      // Obtener el valor del input de búsqueda
-      const query = document.getElementById('searchInput').value;
-
-      // Hacer la solicitud a la API
-      fetch(`https://apisimpsons.fly.dev/api/personajes/find/${query}`)
-        .then(response => response.json())
-        .then(data => mostrarResultado(data))
-        .catch(error => console.error('Error al realizar la solicitud:', error));
-    }
-
-    function mostrarResultado(data) {
-      // Limpiar el contenido anterior
-      document.getElementById('resultado').innerHTML = '';
-
-      // Verificar si hay resultados
-      if (data.length === 0) {
-        document.getElementById('resultado').innerHTML = 'No se encontraron resultados.';
-        return;
-      }
-
-      // Mostrar los resultados
-      const resultadoDiv = document.getElementById('resultado');
-      data.forEach(personaje => {
-        const personajeDiv = document.createElement('div');
-        personajeDiv.textContent = `${personaje.nombre} - ${personaje.descripcion}`;
-        resultadoDiv.appendChild(personajeDiv);
-      });
-    }
-  </script>
+  
 
   <script src="/js/script.js"></script>
   <script src="/js/busqueda.js"></script>

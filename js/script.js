@@ -27,10 +27,9 @@ function mostrarPersonajes(data){
     data.docs.forEach(personaje => {
         const article =document.createRange().createContextualFragment(/*html */`
         
-        // Cada fragmento de HTML es un artículo que contiene información sobre el personaje
         <article>
         <div class="image-container">
-          <img src="${personaje.Imagen}" alt="${personaje.Nombre}" />
+          <img class="character-image" src="${personaje.Imagen}" alt="${personaje.Nombre}" />
           <h2>${personaje.Nombre}</h2>
           <span>Status: ${personaje.Estado}</span>
           <br>
